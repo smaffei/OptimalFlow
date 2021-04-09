@@ -9,15 +9,13 @@
 
 This repository contains the code ```inst_opt_bound```, to calculate horizontal flows at the Core-Mantle Boundary (CMB) that optimise the rate-of-change of a geomagnetic quantity (such as the dipole tilt and the inclination at a specific location at the Earth's surface). Based on the algorithm developed by Livermore et al. (2014) and Maffei et al. (unpublished as of April 2021).
 
-Also included in the repository is a jupyte Notebook (.ipynb file) to create a sample global map plotting the resulting optimal flow on top of the background magnetic field.
+Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to create a sample global map plotting the resulting optimal flow on top of the background magnetic field.
 
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
 
-# inst_opt_bound
+# Optimal flow calculation with inst_opt_bound
 
-## Usage
-
-### Compile the code
+## Compile the code
 
 Compilation of the optimisation code ```inst_opt_bound.F90``` has the following requirements:
 - a Fortran compiler like ```gfortran```
@@ -36,9 +34,8 @@ The repository contains two Makefiles ready to use:
   
 Either option will create the ```inst_opt_bound``` executable in the same folder as the Makefile used (unless otherwise specified by modifying the Makefile)
 
-### Running the code
+## Running the code
 
-#### Sample usage
 ```./inst_opt_bound < input_optimisation_inclination```  
 
 The input file ```input_optimisation_inclination``` is provided in the repository and sets up the code to calculate the flows that optimise the rate-of-change of inclination at a location corresponding to the Sulmona basin, in Central Italy, with the background magnetic field provided by the 2019 realisation of the CHAOS 6 model (provided in the repository)
