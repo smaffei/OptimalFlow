@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Code outputs
+*.DAT
+
+# python cache
+__pycache__
