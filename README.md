@@ -16,6 +16,11 @@ This repository contains the Fortran code ```inst_opt_bound```, to calculate hor
 
 Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to create a sample global map plotting the resulting optimal flow on top of the background magnetic field.
 
+In the repository are included three background magnetic model files:
+- ```CHAOS-6-x9_core_2019.0007.dat``` the CHAOS-6-x9 geomagnetic field model ( http://www.spacecenter.dk/files/magnetic-models/CHAOS-6/ ) for the beginning of 2019
+- ```MODEL.dat``` a dipole field with weak horizontal components. These small components are needed to stabilise the calculation for optimal rate-of-change of VGP latitude and dipole tilt when ```LMAX_B_OBS=1``` (see below for details)
+- ```axial_dipole.dat``` a purely axial dipole field
+- 
 # Optimal flow calculation with inst_opt_bound <a name="OptimalFlowCalculation"></a>
 
 ## Compiling the code <a name="CompileTheCode"></a>
@@ -166,11 +171,6 @@ Also in ```subs.F90``` is defined
 - the grid spacing for arrows in ```FLOW_VECTORS_CENTRED.DAT```, ```GMT_THETA = 30, GMT_PHI = 30```
 - the number of random points in ```FLOW_VECTORS_RANDOM.DAT```, ```NUMBER_RANDOM_START_PTS = 1000```
 - the CMB and Earth's surface radii: ```CMB_RADIUS = 3485.0E3_8, ES_RADIUS = 6371.0E3_8```
-
-In the repository are included three background magnetic model files:
-- ```CHAOS-6-x9_core_2019.0007.dat``` the CHAOS-6-x9 geomagnetic field model ( http://www.spacecenter.dk/files/magnetic-models/CHAOS-6/ ) for the beginning of 2019
-- ```MODEL.dat``` a dipole field with weak horizontal components. These small components are needed to stabilise the calculation for optimal rate-of-change of VGP latitude and dipole tilt when ```LMAX_B_OBS=1```
-- ```axial_dipole.dat``` a purely axial dipole field
 
 # References <a name="refs"></a>
 
