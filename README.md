@@ -6,15 +6,15 @@
     - [List of input parameters](#inputs)
     - [List of output files](#outputs)
 3. [Flow visualisation with ```plot_flow.ipynb```](#FlowVisualisation)
+4. [Details of the algorithm](#algorithm)
+5. [References](#refs)
 
 
 # Overview <a name="overview"></a>
 
-This repository contains the code ```inst_opt_bound```, to calculate horizontal flows at the Core-Mantle Boundary (CMB) that optimise the rate-of-change of a geomagnetic quantity (such as the dipole tilt and the inclination at a specific location at the Earth's surface). Based on the algorithm developed by Livermore et al. (2014) and Maffei et al. (unpublished as of April 2021).
+This repository contains the Fortran code ```inst_opt_bound```, to calculate horizontal flows at the Core-Mantle Boundary (CMB) that optimise the rate-of-change of a geomagnetic quantity (such as the dipole tilt and the inclination at a specific location at the Earth's surface). Based on the algorithm developed by Livermore et al. (2014) and Maffei et al. (unpublished as of April 2021).
 
 Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to create a sample global map plotting the resulting optimal flow on top of the background magnetic field.
-
-Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
 
 # Optimal flow calculation with inst_opt_bound <a name="OptimalFlowCalculation"></a>
 
@@ -132,3 +132,12 @@ Other requirements:
 - ```Basemap``` version 1.3.0
 
 The ```Basemap``` package is not maintained anymore and upgrade to Python 3 might require the use of ```cartopy``` instead.
+
+
+# Details of the algorithm <a name="algorithm"></a>
+
+The Fortran code implements the optimisation algorithm 
+
+# References <a name="refs"></a>
+Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
+
