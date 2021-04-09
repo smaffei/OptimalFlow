@@ -31,18 +31,6 @@ Either option will create the ```inst_opt_bound``` executable in the same folder
 
 ### Running the code
 
-#### Basic usage
-```./inst_opt_bound```  
-After pressing ```Enter``` the user will be promped for input:
-``` 
- ENTER COLAT/LONG (IN DEGREES) FOR OBSERVATION POINT
- ENTER MAX DEGREE FOR U
- ENTER MAX DEGREE FOR B_OBS
- ENTER FILENAME FOR B_OBS: FORMAT SHOULD BE SINGLE LINE OF HEADER THEN GLM/HLM IN TABULAR FORMAT
- ENTER TARGET RMS VALUE FOR FLOW
- ENTER SCALE FACTOR FOR ARROWS
- RESTRICTION OF FLOW? 0: NONE, 1: POL ONLY, 2: TOR ONLY, 3: COLUMNAR
- ENTER ETA
- ENTER MINIMIZATION FLAG. 0: DIPOLE TILT; 1: INTENSITY AT OBSERVATION POINT; 2: INTENSITY CHANGE AT INTENSITY MINIMUM (SAA); SEE DOCUMENTATION FOR MORE
- ```
+#### Sample usage
+```./inst_opt_bound < input_optimisation_inclination```  
 
