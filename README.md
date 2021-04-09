@@ -1,10 +1,10 @@
 ## Table of Content
-1. [Overview](#Overview)
-2. [Optimal flow calculation with inst_opt_bound](#Optimal flow calculation with inst_opt_bound)
-3. [Flow visualisation with plot_flow.ipynb](Flow visualisation with plot_flow.ipynb)
+1. [Overview](#overview)
+2. [Optimal flow calculation with ```inst_opt_bound```](#OptimalFlowCalculation)
+3. [Flow visualisation with ```plot_flow.ipynb```](#FlowVisualisation)
 
 
-# Overview
+# Overview <a name="overview"></a>
 
 This repository contains the code ```inst_opt_bound```, to calculate horizontal flows at the Core-Mantle Boundary (CMB) that optimise the rate-of-change of a geomagnetic quantity (such as the dipole tilt and the inclination at a specific location at the Earth's surface). Based on the algorithm developed by Livermore et al. (2014) and Maffei et al. (unpublished as of April 2021).
 
@@ -12,7 +12,7 @@ Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to
 
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
 
-# Optimal flow calculation with inst_opt_bound
+# Optimal flow calculation with inst_opt_bound <a name="OptimalFlowCalculation"></a>
 
 ## Compile the code
 
@@ -115,7 +115,7 @@ The input file ```input_optimisation_inclination``` is provided in the repositor
    OPTIMISED_QUANTITY_DOT.DAT: optimal rate of change of the quantity selected with MINIM_FLAG
 ```
 
-# Flow visualisation with plot_flow.ipynb
+# Flow visualisation with plot_flow.ipynb <a name="FlowVisualisation"></a>
 
 After the optimal flows have been calculated successfully (```.DAT``` files are present in the directory), simply run the jupyter Notebook ```plot_flow.ipynb```.
 
