@@ -156,7 +156,12 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex={_ct_l^m},&space;{_st_
 
 The optimal rate-of-change of _A_ driven by the optimal flow calculated as above is stored in ```OPTIMISED_QUANTITY_DOT.DAT```.
 
-The code in ```inst_opt_bound``` 
+The code in ```inst_opt_bound.F90``` prompts the user for the input parameter (see above) and passes them to ```optimisation_bound.F90```, where the calculation of the coefficients **q** actually takes place. 
+
+The functions defined in ```subs.F90``` handle the spherical harmonics transforms (via ```fftw3``` and Legendre transforms) for the flow and magnetic field components (and their time derivatives). 
+
+Also in ```subs.F90``` is defined the precision of the calculation, via the ```LONG_REAL``` and the ```EXTRA_LONG_REAL``` variables. To increase the resolution of the final result, change the value of ```EXTRA_LONG_REAL```.
+
 
 # References <a name="refs"></a>
 
