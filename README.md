@@ -13,7 +13,7 @@ Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to
 
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
 
-# Optimal flow calculation with inst_opt_bound
+# Optimal flow calculation with ```inst_opt_bound```
 
 ## Compile the code
 
@@ -115,3 +115,17 @@ The input file ```input_optimisation_inclination``` is provided in the repositor
                          format: l m POL(COS) POL(SIN) TOR(COS) TOR(SIN)
    OPTIMISED_QUANTITY_DOT.DAT: optimal rate of change of the quantity selected with MINIM_FLAG
 ```
+
+# Flow visualisation with ```plot_flow.ipynb```
+
+After the optimal flows have been calculated successfully (```.DAT``` files are present in the directory), simply run the jupyter Notebook ```plot_flow.ipynb```.
+
+This Notebook has been written in Jupyter Notebook 4.4.1, with Python 2.7.11 installed via Anaconda version 1.9.12 (```conda``` 4.8.3) and runs successfully on macOS High Sierra (10.13.6). Jupyter Notebook might require to downgrade the package ```tornado``` to version 4.5.3.
+
+Other requirements:
+- ```numpy``` version 1.15.4
+- ```sys```
+- ```matplotlib``` version 2.2.5
+- ```Basemap``` version 1.3.0
+
+The ```Basemap``` package is not maintained anymore and upgrade to Python 3 might require the use of ```cartopy``` instead.
