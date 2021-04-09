@@ -146,7 +146,7 @@ where **G** is a vector relating the rate-of-change of _A_ to the flow coefficie
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dot{A}=&space;\textbf{G}^T\textbf{q}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dot{A}=&space;\textbf{G}^T\textbf{q}" title="\dot{A}= \textbf{G}^T\textbf{q}" /></a>
 
-and the elements of **G** are a function of the Gauss coefficients of the background magnetic field; **E** is a diagonal matrix with elements <a href="https://www.codecogs.com/eqnedit.php?latex=E_k=l(l&plus;1)(2l&plus;1)^{-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_k=l(l&plus;1)(2l&plus;1)^{-1}" title="E_k=l(l+1)(2l+1)^{-1}" /></a>
+and the elements of **G** are a function of the Gauss coefficients of the background magnetic field; **E** is a diagonal matrix with elements <a href="https://www.codecogs.com/eqnedit.php?latex=E_k=l(l&plus;1)(2l&plus;1)^{-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_k=l(l&plus;1)(2l&plus;1)^{-1}" title="E_k=l(l+1)(2l+1)^{-1}" /></a> and \lambda
 
 
 
