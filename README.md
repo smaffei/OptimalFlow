@@ -138,9 +138,10 @@ The ```Basemap``` package is not maintained anymore and upgrade to Python 3 migh
 
 The Fortran code implements the optimisation algorithm first presented in Livermore et al. (2014) and expanded in Maffei et al. (in prep) and details can be found therein.
 
-The code finds the spherical harmonics coefficients **q** of the horizontal flow **u** at the Core-Mantle Boundary
+The code finds the spherical harmonics coefficients **q** of the toroidal and poloidal horizontal components of the flow **u** at the Core-Mantle Boundary that optimise the rate of change of a given quantity _A_ that can be defined as a function of the Gauss coefficients and their time derivatives.
 
 # References <a name="refs"></a>
+
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
 
 Maffei, Stefano, Philip W. Livermore, Jon E. Mound, Sam Greenwood, and Chris J. Davies. "Fast directional changes during geomagnetic reversals: global reversals or local fluctations?". in prep.
