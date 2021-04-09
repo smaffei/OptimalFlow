@@ -6,7 +6,7 @@
     - [List of input parameters](#inputs)
     - [List of output files](#outputs)
 3. [Flow visualisation with ```plot_flow.ipynb```](#FlowVisualisation)
-4. [Details of the algorithm](#algorithm)
+4. [Details of the algorithm and structure of the code](#algorithm)
 5. [References](#refs)
 
 
