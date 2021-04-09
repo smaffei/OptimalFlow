@@ -1,8 +1,8 @@
 ## Table of Content
-1. [Overview](# Overview)
-2. [inst_opt_bound](# inst_opt_bound)
-  -  [Usage](## Usage)
-    -  [Compile the code](## Compile the code)
+1. [Overview](#Overview)
+2. [inst_opt_bound](#inst_opt_bound)
+  -  [Usage](##Usage)
+    -  [Compile the code](##Compile the code)
 
 
 # Overview
