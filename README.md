@@ -1,7 +1,7 @@
 ## Table of Content
 1. [Overview](#Overview)
-2. [Optimal flow calculation with ```inst_opt_bound```](#Optimal flow calculation with ```inst_opt_bound```)
-3. [Flow visualisation with ```plot_flow.ipynb```](Flow visualisation with ```plot_flow.ipynb```)
+2. [Optimal flow calculation with inst_opt_bound](#Optimal flow calculation with inst_opt_bound)
+3. [Flow visualisation with plot_flow.ipynb](Flow visualisation with plot_flow.ipynb)
 
 
 # Overview
@@ -12,7 +12,7 @@ Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to
 
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
 
-# Optimal flow calculation with ```inst_opt_bound```
+# Optimal flow calculation with inst_opt_bound
 
 ## Compile the code
 
@@ -115,7 +115,7 @@ The input file ```input_optimisation_inclination``` is provided in the repositor
    OPTIMISED_QUANTITY_DOT.DAT: optimal rate of change of the quantity selected with MINIM_FLAG
 ```
 
-# Flow visualisation with ```plot_flow.ipynb```
+# Flow visualisation with plot_flow.ipynb
 
 After the optimal flows have been calculated successfully (```.DAT``` files are present in the directory), simply run the jupyter Notebook ```plot_flow.ipynb```.
 
