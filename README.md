@@ -1,6 +1,10 @@
 ## Table of Content
 1. [Overview](#overview)
 2. [Optimal flow calculation with ```inst_opt_bound```](#OptimalFlowCalculation)
+  - [Compile the code](#CompileTheCode)
+  - [Running the code](#RunningTheCode)
+    - [List of input parameters](#inputs)
+    - [List of output files](#outputs)
 3. [Flow visualisation with ```plot_flow.ipynb```](#FlowVisualisation)
 
 
@@ -14,7 +18,7 @@ Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraint
 
 # Optimal flow calculation with inst_opt_bound <a name="OptimalFlowCalculation"></a>
 
-## Compile the code
+## Compile the code <a name="CompileTheCode"></a>
 
 Compilation of the optimisation code ```inst_opt_bound.F90``` has the following requirements:
 - a Fortran compiler like ```gfortran```
@@ -33,13 +37,13 @@ The repository contains two Makefiles ready to use:
   
 Either option will create the ```inst_opt_bound``` executable in the same folder as the Makefile used (unless otherwise specified by modifying the Makefile)
 
-## Running the code
+## Running the code <a name="RunningTheCode"></a>
 
 ```./inst_opt_bound < input_optimisation_inclination```  
 
 The input file ```input_optimisation_inclination``` is provided in the repository and sets up the code to calculate the flows that optimise the rate-of-change of inclination at a location corresponding to the Sulmona basin, in Central Italy, with the background magnetic field provided by the 2019 realisation of the CHAOS 6 model (provided in the repository)
 
-#### Detailed list of input parameters
+### List of input parameters <a name="inputs"></a>
 ```
    OBS_COLAT, OBS_LONG:  colatitude and longitude of the observation/optimisation 
                          location. They need to be given even when optimising global 
@@ -74,7 +78,7 @@ The input file ```input_optimisation_inclination``` is provided in the repositor
                          7: VGP latitude
  ```
 
-### Detailed list of output files 
+### List of output files <a name="outputs"></a>
 ```
    D_CS_CENTRED.DAT:     declination at grid locations at the CMB
    D_DOT_CS_CENTRED.DAT: declination variations (driven by the optimal solution) 
