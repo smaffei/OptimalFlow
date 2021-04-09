@@ -1,8 +1,7 @@
 ## Table of Content
 1. [Overview](#Overview)
 2. [Optimal flow calculation with ```inst_opt_bound```](#Optimal flow calculation with ```inst_opt_bound```)
-  -  [Usage](##Usage)
-    -  [Compile the code](##Compile the code)
+3. [Flow visualisation with ```plot_flow.ipynb```](Flow visualisation with ```plot_flow.ipynb```)
 
 
 # Overview
