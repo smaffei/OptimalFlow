@@ -8,7 +8,9 @@ Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraint
 
 # inst_opt_bound
 
-## Compile the code
+## Usage
+
+### Compile the code
 
 Compilation of the optimisation code ```inst_opt_bound.F90``` has the following requirements:
 - a Fortran compiler like ```gfortran```
@@ -25,4 +27,11 @@ The repository contains two Makefiles ready to use:
   
   Usage: ```make -f Makefile_optimisation_mac```  
   
+Either option will create the ```inst_opt_bound``` executable in the same folder as the Makefile used (unless otherwise specified by modifying the Makefile)
 
+### Running the code
+
+#### Basic usage
+```./inst_opt_bound``` 
+
+This
