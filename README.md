@@ -162,7 +162,7 @@ The functions defined in ```subs.F90``` handle the spherical harmonics transform
 
 Also in ```subs.F90``` is defined 
 - the precision of the calculation, via the ```LONG_REAL``` and the ```EXTRA_LONG_REAL``` variables. To increase the resolution of the final result, change the value of ```EXTRA_LONG_REAL```. ```LONG_REAL=8``` and ```EXTRA_LONG_REAL=8``` should suffice for most calculations, though we find that the VGP latitude (```MINIM_FLAG = 7```) requires ```EXTRA_LONG_REAL=16```
-- GMT geographical the grid resolution, ```NTHETA_GRID_CONTOUR_GMT = 100, NPHI_GRID_CONTOUR_GMT = 200```
+- GMT geographical grid resolution for ```*CENTRED.DAT``` output files, ```NTHETA_GRID_CONTOUR_GMT = 100, NPHI_GRID_CONTOUR_GMT = 200```
 - the grid spacing for arrows in ```FLOW_VECTORS_CENTRED.DAT```, ```GMT_THETA = 30, GMT_PHI = 30```
 - the number of random points in ```FLOW_VECTORS_RANDOM.DAT```, ```NUMBER_RANDOM_START_PTS = 1000```
 - the CMB and Earth's surface radii: ```CMB_RADIUS = 3485.0E3_8, ES_RADIUS = 6371.0E3_8```
