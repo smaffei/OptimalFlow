@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+inst_opt_bound
 
 # Code outputs
 *.DAT
