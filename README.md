@@ -136,7 +136,81 @@ The ```Basemap``` package is not maintained anymore and upgrade to Python 3 migh
 
 # Details of the algorithm <a name="algorithm"></a>
 
-The Fortran code implements the optimisation algorithm first presented in Livermore et al. (2014) and expanded in Maffei et al. (in prep)
+The Fortran code implements the optimisation algorithm first presented in Livermore et al. (2014) and expanded in Maffei et al. (in prep) and details can be found therein.
+
+The radial induction equation evaluated at the CMB \citep{roberts1965analysis}, in its diffusionless form, can be written as:
+$$\dot{B}_r= -\nabla_H\cdot(\textbf{u}_H B_r), $$
+
+where, $B_r$ is the radial component of \textbf{B} and $\nabla_H = \nabla - \hat{\textbf{r}}\partial_r$ is the horizontal part of the spatial gradient operator. The time derivative $\dot{B}_r$ is often referred to as the secular variation (SV). At a location $(r,\theta,\phi)$ outside the core, the geomagnetic field is commonly described as an expansion in its Gauss coefficients $(g_l^m,h_l^m)$:
+\begin{equation}
+\textbf{B} = a \nabla\sum_{l=1}^{L_B}\sum_{m=0}^l\left(\frac{a}{r}\right)^{l+1} \left[ g_l^m\cos(m\phi) + h_l^m \sin(m\phi) \right]P_l^m(\cos(\theta)),    
+\label{eqn:SHexp1}
+\end{equation}
+where $a = 6371$ km is the radius of the Earth, $P_l^m(\cos(\theta))$ are Schmidt semi-normalised associated Legendre polynomials of degree $l$ and order $m$ and $L_B$ is the highest degree of the expansion. 
+%The Gauss coefficients are typically measured in nT \citep{thebault2015international,finlay2016recent} or in $\mu$T \citep{leonhardt2007paleomagnetic}. 
+In a more compact notation, useful to simplify the following discussion, expansion \eqref{eqn:SHexp1} can be written as:
+\begin{equation}
+\textbf{B} = a \nabla\sum_{l,m}\left(\frac{a}{r}\right)^{l+1}  \beta_l^m Y_l^m(\theta,\phi),     
+\end{equation}
+where $\beta_l^m = (g_l^m,h_l^m)$ are the Gauss coefficients and $Y_l^m(\theta,\phi) = (_cY_l^m(\theta,\phi), _sY_l^m(\theta,\phi))$, with $_cY_l^m(\theta,\phi) = \cos(m\phi) P_l^m(\cos(\theta))  $ and $_sY_l^m(\theta,\phi) = \sin(m\phi) P_l^m(\cos(\theta))  $ are real-valued Schmidt semi-normalised spherical harmonics. Similarly, we express the CMB flow $\textbf{u}_H$ as an expansion over a set of modes $\textbf{u}_k$:
+\begin{equation}
+\textbf{u}_H = \sum_k q_k \textbf{u}_k,
+\label{eqn:uH_short}    
+\end{equation}
+where $k$ is a shorthand notation for the indexes $(l,m)$, with $0<l\le L_U$, $0\le m \le l$, $q_k$ are the coefficients, measured in km/yr of the expansion and $\textbf{u}_k$ is the $k$-th element of a divergence-free basis set consisting of both toroidal and poloidal modes, respectively:
+\begin{gather}
+\textbf{u}_k^t = \nabla\times Y_l^m(\theta,\phi)\textbf{r},\\
+\textbf{u}_k^s = \nabla_H[Y_l^m(\theta,\phi)r].
+\end{gather}
+Expansion \eqref{eqn:uH_short} can then be more explicitly written as
+\begin{equation}
+\begin{split}
+\textbf{u}_H = &\sum_{l,m} \Big\{ {_ct_l^m} \nabla\times {_cY_l^m}(\theta,\phi)\textbf{r} + {_st_l^m} \nabla\times {_sY_l^m}(\theta,\phi)\textbf{r} \Big\} \\
+  + & \sum_{l,m} \Big\{ {_cs_l^m} \nabla_H[ {_cY_l^m}(\theta,\phi)r] + {_ss_l^m} \nabla_H[ {_sY_l^m}(\theta,\phi)r]\Big\},
+\end{split}
+\end{equation}
+where $_ct_l^m$ and $_st_l^m$ are the real-valued toroidal flow coefficients and $_cs_l^m$ and $_ss_l^m$ are the real-valued poloidal flow coefficients.
+
+Given a geomagnetic quantity $\mathcal{A}$, which is a function of the Gauss components $\beta_l^m$, we seek the minimum rms speed $T_0$ of the CMB flows required to reproduce a given rate-of-change value of $\mathcal{A}$. We therefore calculate the flows $\textbf{u}_{\text{opt}}$ at the CMB that optimise $\dot{\mathcal{A}}$. Following the same notation as in \cite{livermore2014core}, the rate-of-change of $\mathcal{A}$ can be generally expressed (by manipulating \eqref{eqn:induction_r}) as:
+\begin{equation}
+\dot{\mathcal{A}}=  \textbf{G}^T\textbf{q},  
+\label{eqn:dFdt}
+\end{equation}
+with the vector $\textbf{G}$ being a function of the CMB background geomagnetic field $B_r$, through the coefficients $\beta_l^m$ and of the basis set $\textbf{u}_k$. The exact shape of $\textbf{G}$ depends on the functional dependence of $\dot{\mathcal{A}}$ on $\beta_l^m$ and $\dot{\beta}_l^m$. %In particular, note that for geomagnetic quantities defined at the Earth's surface the components of $\textbf{B}$ involved in the definition of said quantities are evaluated at $r=a$, for which, compared to the geomagnetic field components evaluated at $r=c$, smaller spatial scales are attenuated. 
+Regardless of whether $\mathcal{A}$ is defined at the Earth's surface or not, each component $G_k$ represents the contribution to $\dot{\mathcal{A}}$ from the flow mode $\textbf{u}_k$, given the CMB background field $B_r$. 
+
+Note that the optimisation problem as posed above is ill-posed since, in general, variations of $\mathcal{A}$, optimal or not, can be expected to grow indefinitely as the kinetic energy of the CMB flow increases. The rms flow speed $T_0$ as:
+\begin{equation}
+  T_0\equiv\sqrt{\frac{1}{4\pi} \int_{r=c} |\textbf{u}_H|^2 d\Omega} = \sqrt{\textbf{q}^T\textbf{E} \ \textbf{q}}\,
+\end{equation}
+where $d\Omega = \sin\theta  ~ d\theta ~ d\phi$ is the surface element in spherical coordinates and the integral is evaluated on the surface of the CMB and $\textbf{E}$ is a diagonal matrix with elements $E_k=l(l+1)(2l+1)^{-1}$. 
+%In order to constrain the rms flow intensity we introduce the following constraint:
+%\begin{equation}
+%\sqrt{\textbf{q}^T\textbf{E} \ \textbf{q}} = T_0.  
+%\label{eqn:constraint1}
+%\end{equation}
+%The larger the value of $T_0$, the larger the optimal value of  $\dot{\mathcal{A}}$. 
+The procedure to calculate the coefficients $\textbf{q}$ that optimise $\dot{\mathcal{A}}$ is formally equivalent to the one reported in \cite{livermore2014core}, and rests on finding solution to the following maximisation problem:
+\begin{equation}
+\left. \dot{\mathcal{A}} \right|_\text{max} = \text{max}_\textbf{q} \left[ \textbf{G}^T\textbf{q} - \lambda(\textbf{q}^T\textbf{E} \ \textbf{q} - T_0^2  ) \right],
+\label{eqn:Lagrange_eq}
+\end{equation}
+which allows us to maximise \eqref{eqn:dFdt} subject to the constraint (expressed via the Lagrange multiplier $\lambda$) that the root-mean-squared (rms) velocity of the optimal flow be equal to $T_0$. The solution to \eqref{eqn:Lagrange_eq} gives us the coefficients $\textbf{q}_\text{opt}$ to the optimal flow $\textbf{u}_\text{opt}$:
+\begin{equation}
+    \textbf{q}_\text{opt} = \frac{1}{2\lambda} \textbf{E}^{-1} \textbf{G}, 
+    \label{eqn:qopt}
+\end{equation}
+where
+\begin{equation}
+\lambda = \pm \frac{1}{2 T_0}\sqrt{\textbf{G}^T \textbf{E}^{-1} \ \textbf{G}},
+\label{eqn:lambda}
+\end{equation}
+is found by scaling the coefficients $\textbf{q}_\text{opt}$ so that 
+\begin{equation}
+\textbf{q}_\text{opt}^T\textbf{E} \ \textbf{q}_\text{opt}=T_0^2.
+\label{eqn:rms_constraint}
+\end{equation}
+Notice that this implies that $\textbf{q}_\text{opt}$ and, by \eqref{eqn:dFdt}, $\dot{\mathcal{A}}$ are both directly proportional to $T_0$. However, the form of the optimal flows, and of the SV they drive, is not affected by $T_0$.
 
 # References <a name="refs"></a>
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
