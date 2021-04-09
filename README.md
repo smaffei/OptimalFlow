@@ -20,7 +20,8 @@ In the repository are included three background magnetic model files:
 - ```CHAOS-6-x9_core_2019.0007.dat``` the CHAOS-6-x9 geomagnetic field model ( http://www.spacecenter.dk/files/magnetic-models/CHAOS-6/ ) for the beginning of 2019
 - ```MODEL.dat``` a dipole field with weak horizontal components. These small components are needed to stabilise the calculation for optimal rate-of-change of VGP latitude and dipole tilt when ```LMAX_B_OBS=1``` (see below for details)
 - ```axial_dipole.dat``` a purely axial dipole field
-- 
+
+
 # Optimal flow calculation with inst_opt_bound <a name="OptimalFlowCalculation"></a>
 
 ## Compiling the code <a name="CompileTheCode"></a>
