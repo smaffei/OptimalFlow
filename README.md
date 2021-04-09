@@ -1,7 +1,7 @@
 ## Table of Content
 1. [Overview](#overview)
 2. [Optimal flow calculation with ```inst_opt_bound```](#OptimalFlowCalculation)
-  - [Compile the code](#CompileTheCode)
+  - [Compiling the code](#CompileTheCode)
   - [Running the code](#RunningTheCode)
     - [List of input parameters](#inputs)
     - [List of output files](#outputs)
@@ -18,7 +18,7 @@ Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to
 
 # Optimal flow calculation with inst_opt_bound <a name="OptimalFlowCalculation"></a>
 
-## Compile the code <a name="CompileTheCode"></a>
+## Compiling the code <a name="CompileTheCode"></a>
 
 Compilation of the optimisation code ```inst_opt_bound.F90``` has the following requirements:
 - a Fortran compiler like ```gfortran```
