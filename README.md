@@ -43,7 +43,8 @@ The input file ```input_optimisation_inclination``` is provided in the repositor
 #### Detailed list of input parameters
 ```
    OBS_COLAT, OBS_LONG:  colatitude and longitude of the observation/optimisation 
-                         location
+                         location. They need to be given even when optimising global 
+                         quantities (such as dipole tilt rate-of-change)
    PHI_OBS:              OBS_LONG * Pi / 180.0_8
    LMAX_U:               max spherical harmonics degree for the optimal flow
    LMAX_B_OBS:           max spherical harmonics degree for the background
