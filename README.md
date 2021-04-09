@@ -136,8 +136,9 @@ The ```Basemap``` package is not maintained anymore and upgrade to Python 3 migh
 
 # Details of the algorithm <a name="algorithm"></a>
 
-The Fortran code implements the optimisation algorithm 
+The Fortran code implements the optimisation algorithm first presented in Livermore et al. (2014) and expanded in Maffei et al. (in prep)
 
 # References <a name="refs"></a>
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
 
+Maffei, Stefano, Philip W. Livermore, Jon E. Mound, Sam Greenwood, and Chris J. Davies. "Fast directional changes during geomagnetic reversals: global reversals or local fluctations?". in prep.
