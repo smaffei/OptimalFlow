@@ -12,7 +12,7 @@
 
 # Overview <a name="overview"></a>
 
-This repository contains the Fortran code ```inst_opt_bound```, to calculate horizontal flows at the Core-Mantle Boundary (CMB) that optimise the rate-of-change of a geomagnetic quantity (such as the dipole tilt and the inclination at a specific location at the Earth's surface). Based on the algorithm developed by Livermore et al. (2014) and Maffei et al. (unpublished as of April 2021).
+This $\alpha$ repository contains the Fortran code ```inst_opt_bound```, to calculate horizontal flows at the Core-Mantle Boundary (CMB) that optimise the rate-of-change of a geomagnetic quantity (such as the dipole tilt and the inclination at a specific location at the Earth's surface). Based on the algorithm developed by Livermore et al. (2014) and Maffei et al. (unpublished as of April 2021).
 
 Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to create a sample global map plotting the resulting optimal flow on top of the background magnetic field.
 
@@ -139,7 +139,8 @@ The ```Basemap``` package is not maintained anymore and upgrade to Python 3 migh
 The Fortran code implements the optimisation algorithm first presented in Livermore et al. (2014) and expanded in Maffei et al. (in prep) and details can be found therein.
 
 The radial induction equation evaluated at the CMB \citep{roberts1965analysis}, in its diffusionless form, can be written as:
-$$\dot{B}_r= -\nabla_H\cdot(\textbf{u}_H B_r), $$
+
+$\dot{B}_r= -\nabla_H\cdot(\textbf{u}_H B_r), $
 
 where, $B_r$ is the radial component of \textbf{B} and $\nabla_H = \nabla - \hat{\textbf{r}}\partial_r$ is the horizontal part of the spatial gradient operator. The time derivative $\dot{B}_r$ is often referred to as the secular variation (SV). At a location $(r,\theta,\phi)$ outside the core, the geomagnetic field is commonly described as an expansion in its Gauss coefficients $(g_l^m,h_l^m)$:
 \begin{equation}
