@@ -1,0 +1,6 @@
+F90 = ifort # gfortran -ffree-line-length-0
+inst_opt_bound :  inst_opt_bound.F90 subs.F90 optimisation_bound.F90
+	$(F90) -c   subs.F90
+	$(F90) -c   optimisation_bound.F90
+	$(F90) -o inst_opt_bound inst_opt_bound.F90 subs.o optimisation_bound.o -lfftw3 
+    

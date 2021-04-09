@@ -36,3 +36,8 @@
 
 # python cache
 __pycache__
+
+# backups and other local files
+*backup*
+*nomap*
+*quad_precision*
