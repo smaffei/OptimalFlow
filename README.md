@@ -134,11 +134,11 @@ Other requirements:
 The ```Basemap``` package is not maintained anymore and upgrade to Python 3 might require the use of ```cartopy``` instead.
 
 
-# Details of the algorithm <a name="algorithm"></a>
+# Details of the algorithm and structure of the code <a name="algorithm"></a>
 
 The Fortran code implements the optimisation algorithm first presented in Livermore et al. (2014) and expanded in Maffei et al. (in prep) and details can be found therein.
 
-The code finds the spherical harmonics coefficients *q*
+The code finds the spherical harmonics coefficients **q** of the horizontal flow **u** at the Core-Mantle Boundary
 
 # References <a name="refs"></a>
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
