@@ -34,3 +34,4 @@ Either option will create the ```inst_opt_bound``` executable in the same folder
 #### Sample usage
 ```./inst_opt_bound < input_optimisation_inclination```  
 
+The input file ```input_optimisation_inclination``` is provided in the repository and sets up the code to calculate the flows that optimise the rate-of-change of inclination at a location corresponding to the Sulmona basin, in Central Italy, with the background magnetic field provided by the 2019 realisation of the CHAOS 6 model (provided in the repository)
