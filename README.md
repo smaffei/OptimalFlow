@@ -1,3 +1,10 @@
+## Table of Content
+1. [Overview](# Overview)
+2. [inst_opt_bound](# inst_opt_bound)
+  -  [Usage](## Usage)
+    -  [Compile the code](## Compile the code)
+
+
 # Overview
 
 This repository contains the code ```inst_opt_bound```, to calculate horizontal flows at the Core-Mantle Boundary (CMB) that optimise the rate-of-change of a geomagnetic quantity (such as the dipole tilt and the inclination at a specific location at the Earth's surface). Based on the algorithm developed by Livermore et al. (2014) and Maffei et al. (unpublished as of April 2021).
