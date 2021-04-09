@@ -138,7 +138,7 @@ The ```Basemap``` package is not maintained anymore and upgrade to Python 3 migh
 
 The Fortran code implements the optimisation algorithm first presented in Livermore et al. (2014) and expanded in Maffei et al. (in prep) and details can be found therein.
 
-
+The code finds the spherical harmonics coefficients *q*
 
 # References <a name="refs"></a>
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
