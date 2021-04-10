@@ -127,7 +127,7 @@ The input file ```input_optimisation_inclination``` is provided in the repositor
 
 # Flow visualisation with plot_flow.ipynb <a name="FlowVisualisation"></a>
 
-After the optimal flows have been calculated successfully (```.DAT``` files are present in the directory), simply run the jupyter Notebook ```plot_flow.ipynb```.
+After the optimal flows have been calculated successfully (```.DAT``` files are present in the main directory), simply run the jupyter Notebook ```plot_flow.ipynb```.
 
 This Notebook has been written in Jupyter Notebook 4.4.1, with Python 2.7.11 installed via Anaconda version 1.9.12 (```conda``` 4.8.3) and runs successfully on macOS High Sierra (10.13.6). Jupyter Notebook might require to downgrade the package ```tornado``` to version 4.5.3.
 
