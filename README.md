@@ -14,9 +14,9 @@
 
 This repository contains the Fortran code ```inst_opt_bound```, to calculate horizontal flows at the Core-Mantle Boundary (CMB) that optimise the rate-of-change of a geomagnetic quantity (such as the dipole tilt and the inclination at a specific location at the Earth's surface). Based on the algorithm developed by Livermore et al. (2014) and Maffei et al. (unpublished as of April 2021).
 
-Also included in the repository is a jupyter Notebook (```plot_flow.ipynb```) to create a sample global map plotting the resulting optimal flow on top of the background magnetic field.
+Also included in the ```Python27``` folder is a jupyter Notebook (```plot_flow.ipynb```) to create a sample global map plotting the resulting optimal flow on top of the background magnetic field.
 
-In the repository are included three background magnetic model files:
+In the ```models/``` folder are included three background magnetic model files:
 - ```CHAOS-6-x9_core_2019.0007.dat``` the CHAOS-6-x9 geomagnetic field model ( http://www.spacecenter.dk/files/magnetic-models/CHAOS-6/ ) for the beginning of 2019
 - ```MODEL.dat``` a dipole field with weak horizontal components. These small components are needed to stabilise the calculation for optimal rate-of-change of VGP latitude and dipole tilt when ```LMAX_B_OBS=1``` (see below for details)
 - ```axial_dipole.dat``` a purely axial dipole field
