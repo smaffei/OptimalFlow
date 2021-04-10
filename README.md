@@ -1,6 +1,6 @@
 ## Table of Content
 1. [Overview](#overview)
-2. [Optimal flow calculation with ```inst_opt_bound```](#OptimalFlowCalculation)
+2. [Instantaneous optimal flow calculation with ```inst_opt_bound```](#InstOptimalFlowCalculation)
   - [Compiling the code](#CompileTheCode)
   - [Running the code](#RunningTheCode)
     - [List of input parameters](#inputs)
@@ -22,7 +22,7 @@ In the ```models/``` folder are included three background magnetic model files:
 - ```axial_dipole.dat``` a purely axial dipole field
 
 
-# Optimal flow calculation with inst_opt_bound <a name="OptimalFlowCalculation"></a>
+# Instantaneous optimal flow calculation with inst_opt_bound <a name="InstOptimalFlowCalculation"></a>
 
 ## Compiling the code <a name="CompileTheCode"></a>
 
