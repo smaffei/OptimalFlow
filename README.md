@@ -21,6 +21,9 @@ In the ```models/``` folder are included three background magnetic model files:
 - ```MODEL.dat``` a dipole field with weak horizontal components. These small components are needed to stabilise the calculation for optimal rate-of-change of VGP latitude and dipole tilt when ```LMAX_B_OBS=1``` (see below for details)
 - ```axial_dipole.dat``` a purely axial dipole field
 
+Authors:  
+Stefano maffei: maffei.ste@gmail.com  
+Philip W. Livermore: P.W.Livermore@leeds.ac.uk 
 
 # Instantaneous optimal flow calculation with inst_opt_bound <a name="InstOptimalFlowCalculation"></a>
 
