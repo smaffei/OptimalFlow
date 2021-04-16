@@ -39,6 +39,8 @@ The repository contains two Makefiles ready to use:
   
   Usage: ```make```  
   
+  You will have to make sure that the ```FFLAGS``` and ```LDFLAGS``` in the ```Makefile``` point at the folders containing, respectively, ```fftw3.h``` and ```libfftw3.a```.
+  
   Note that compilation with this version of gfortran causes warnings to be displaied concerning placement of commas after ```WRITE``` commands and is due to a change in standards in ```gfortran``` that occurred during the development of the code and have not been corrected. The option ```-ffree-line-length-0```
 - ```Makefile_optimisation``` which uses the ```ifort``` compiler and has been designed for use on a remote cluster where the ```fftw3``` library could be loaded as a module.  
   
