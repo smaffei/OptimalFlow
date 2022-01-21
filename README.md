@@ -182,4 +182,4 @@ Also in ```subs.F90``` is defined
 
 Livermore, Philip W., Alexandre Fournier, and Yves Gallet. "Core-flow constraints on extreme archeomagnetic intensity changes." _Earth and Planetary Science Letters_ 387 (2014): 145-156.
 
-Maffei, Stefano, Philip W. Livermore, Jon E. Mound, Sam Greenwood, and Chris J. Davies. "Fast directional changes during geomagnetic reversals: global reversals or local fluctations?". in prep.
+Maffei, Stefano, Philip W. Livermore, Jon E. Mound, Sam Greenwood, and Chris J. Davies. "Fast directional changes during geomagnetic reversals: global reversals or local fluctations?". _Geosciences_ 11, no. 8 (2021): 318.
